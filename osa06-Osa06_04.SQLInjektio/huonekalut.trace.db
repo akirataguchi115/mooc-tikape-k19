@@ -1,0 +1,42 @@
+2019-02-18 09:42:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "HUONEKALU" not found; SQL statement:
+INSERT INTO Huonekalu (nimi) VALUES (?); DROP TABLE Huonekalu; --- [42102-197]
+2019-02-18 09:43:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "HUONEKALU" not found; SQL statement:
+SELECT * FROM Huonekalu [42102-197]
+2019-02-18 09:45:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "HUONEKALU" not found; SQL statement:
+SELECT * FROM Huonekalu [42102-197]
+2019-02-20 20:23:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO HUONEKALU (NIMI) VALUES TUOLI[*]); "; expected "("; SQL statement:
+INSERT INTO Huonekalu (nimi) VALUES tuoli); [42001-197]
+2019-02-20 20:23:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "TUOLI" not found; SQL statement:
+INSERT INTO Huonekalu (nimi) VALUES (tuoli ); [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Insert.prepare(Insert.java:314)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at com.zaxxer.hikari.pool.ProxyStatement.executeUpdate(ProxyStatement.java:120)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.executeUpdate(HikariProxyStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate$1UpdateStatementCallback.doInStatement(JdbcTemplate.java:511)
+	at org.springframework.jdbc.core.JdbcTemplate$1UpdateStatementCallback.doInStatement(JdbcTemplate.java:508)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:376)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:523)
+	at huonekalut.HuonekaluSovellus.run(HuonekaluSovellus.java:49)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:813)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at huonekalut.HuonekaluSovellus.main(HuonekaluSovellus.java:20)
+2019-02-20 20:27:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "HUONEKALU" not found; SQL statement:
+SELECT * FROM Huonekalu [42102-197]

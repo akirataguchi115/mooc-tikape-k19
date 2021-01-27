@@ -1,0 +1,6 @@
+force_new_sandbox: true
+extra_student_files:
+ - asiakkaat.mv.db
+ - asiakkaat.trace.db
+
+

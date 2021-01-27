@@ -1,0 +1,6 @@
+2019-02-04 19:46:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "HENKILO" already exists; SQL statement:
+CREATE TABLE Henkilo(id serial, nimi varchar(255)) [42101-197]
+2019-02-04 19:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE HENKILO(ID SERIAL, NIMI VARCHAR(255)) IF[*] NOT EXISTS "; SQL statement:
+CREATE TABLE Henkilo(id serial, nimi varchar(255)) IF NOT EXISTS [42000-197]

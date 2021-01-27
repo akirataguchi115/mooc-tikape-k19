@@ -1,0 +1,9 @@
+2019-02-04 21:05:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "HENKILO" not found; SQL statement:
+SELECT nimi FROM Henkilo; [42102-197]
+2019-02-16 21:55:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELET[*] NIMI FROM HENKILO "; expected "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"; SQL statement:
+SELET nimi FROM Henkilo [42001-197]
+2019-02-16 21:56:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELET[*] NIMI FROM HENKILO; "; expected "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"; SQL statement:
+SELET nimi FROM Henkilo; [42001-197]
